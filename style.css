@@ -1,0 +1,312 @@
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the font family for the entire body */
+body {
+  font-family: "Roboto", system-ui;
+}
+
+/* Define the grid layout for the main section */
+main {
+  display: grid;
+  grid-template: 130px 800px / 200px 1fr;
+}
+
+/* Style the header section */
+header {
+  /* position: sticky;
+  top: 0;
+  right: 0; */
+  background-color: white;
+  grid-column: 2 /3;
+  box-shadow: 1px 1px 10px 1px #d1d5db;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* Style the top part of the header */
+.header-top {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Style the search bar in the header */
+.header-top > .search-bar {
+  display: grid;
+  grid-template-columns: 100px 0.8fr;
+  align-self: center;
+}
+
+/* Style the search icon in the search bar */
+.header-top > .search-bar > svg {
+  margin-left: 60px;
+}
+
+/* Style the input field in the search bar */
+.header-top > .search-bar > input {
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style the notification section in the header */
+.header-top .notication {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 30px;
+}
+
+/* Style the heading in the header */
+.header-top h3 {
+  cursor: pointer;
+}
+
+/* Style the icons and text in the notification section */
+.header-top > .notication > svg,
+.header-top > .notication > img,
+.header-top > .notication > h3 {
+  margin-left: 20px;
+}
+
+/* Style the bottom part of the header */
+header > .header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Style the profile section in the header */
+.header-bottom > .profile {
+  display: grid;
+  grid-template: 1fr 1fr / 100px minmax(0px, 1fr);
+}
+
+/* Style the profile image in the profile section */
+.header-bottom > .profile > img {
+  justify-self: end;
+  align-self: end;
+  grid-row: 1 / 3;
+}
+
+/* Style the heading in the profile section */
+.header-bottom > .profile > h5 {
+  font-size: 0.7rem;
+  align-self: end;
+}
+
+/* Style the heading in the profile section */
+.header-bottom > .profile > h3 {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Style the profile button in the profile section */
+.header-bottom .profile-button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Style the button in the profile section */
+.profile-button button {
+  background-color: #3b82f6;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  margin-right: 20px;
+  width: 70px;
+  height: 30px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Style the aside section */
+aside {
+  background-color: #3b82f6;
+  grid-row: 1 / 3;
+}
+
+/* Style the heading in the aside section */
+aside h1 {
+  cursor: pointer;
+}
+
+/* Style the website logo in the aside section */
+aside > .website-logo {
+  margin: 20px 0 0 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Style the side logos in the aside section */
+aside > .side-logos1,
+aside> .side-logos2 {
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Style the divs in the side logos section */
+aside > .side-logos1 > div,
+aside > .side-logos2 > div  {
+  margin: 10px;
+  align-items: center;
+  display: flex;
+}
+
+/* Style the headings in the side logos section */
+aside > .side-logos1 > div > h4,
+aside > .side-logos2 > div > h4 {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Style the article section */
+article {
+  background-color: #f3f4f6;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+/* Style the projects section in the article */
+article .projects {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40px repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+/* Style the heading in the projects section */
+.projects h2 {
+  margin-left: 10px;
+  font-size: 1rem;
+  align-self: end;
+  grid-column: 1 / 3;
+}
+
+/* Style the project cards in the projects section */
+.projects .project-card {
+  height: 200px;
+  border-radius: 8px;
+  background-color: white;
+  border-left: 6px solid orange;
+  box-shadow: 0px 1px 16px 0px rgba(129,129,129,0.33);
+
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+
+/* Style the card info in the project cards */
+.project-card .card-info {
+  margin: 10px ;
+  overflow: hidden;
+}
+
+/* Style the card icons in the project cards */
+.project-card .card-icons {
+  margin-right: 8px;
+  justify-self: end;
+}
+
+/* Style the side cards in the article */
+article .side-cards {
+  margin-left: 20px;
+  display: grid;
+  grid-template-rows: 40px 1fr 40px 1fr;
+  gap: 1rem;
+}
+
+/* Style the heading in the side cards section */
+.side-cards h2 {
+  margin-left: 10px;
+  font-size: 1rem;
+  align-self: end;
+}
+
+/* Style the side card in the side cards section */
+.side-cards .side-card {
+  margin-right: 10px;
+  overflow: hidden;
+  padding: 20px;
+  /* min-width: 200px; */
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 1px 16px 0px rgba(129,129,129,0.33);
+}
+
+/* Style the top card in the side cards section */
+.top-card {
+  max-height: 350px;
+}
+
+/* Style the heading in the side card */
+.side-card h3 {
+  margin-top: 10px;
+  font-size: 0.7rem;
+}
+
+/* Style the paragraph in the side card */
+.side-card p {
+  font-size: 0.7 rem;
+  margin-bottom: 10px;
+}
+
+/* Style the bottom card in the side cards section */
+.bottom-card {
+  max-height: 275px;
+
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/* Style the divs in the bottom card */
+.bottom-card > div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Style the images in the bottom card */
+.bottom-card > div img {
+  cursor: pointer;
+  width: 30px;
+  border-radius: 50px;
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: end;
+}
+
+/* Style the headings in the bottom card */
+.bottom-card > div h3 {
+  cursor: pointer;
+  margin-left: 10px;
+  align-self: end;
+  font-size: 0.7rem;
+}
+
+/* Style the paragraphs in the bottom card */
+.bottom-card > div p {
+  color: grey;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+/* Style the SVG elements */
+svg {
+  cursor: pointer;
+}
+
+/* Style the images */
+img {
+  cursor: pointer;
+}
